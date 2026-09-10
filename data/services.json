@@ -1,0 +1,22 @@
+{
+  "services": [
+    { "slug": "cut", "name": "Cut", "blurb": "Precision cuts that grow out well, not just look good on day one.", "image": "svc-cut", "from": 85,
+      "menu": [
+        { "name": "Signature cut & style", "duration": "60 min", "price": 85 },
+        { "name": "Silk press & trim", "duration": "90 min", "price": 120 },
+        { "name": "Big chop consultation", "duration": "30 min", "price": 45 }
+      ] },
+    { "slug": "colour", "name": "Colour", "blurb": "Balayage, gloss and full colour, always with a strand test first.", "image": "svc-color", "from": 145,
+      "menu": [
+        { "name": "Gloss & tone", "duration": "45 min", "price": 145 },
+        { "name": "Partial balayage", "duration": "2.5 hrs", "price": 260 },
+        { "name": "Full colour correction", "duration": "consult", "price": 400 }
+      ] },
+    { "slug": "extensions", "name": "Extensions", "blurb": "Sew-ins, closures and frontals, fitted and blended on the chair.", "image": "svc-style", "from": 180,
+      "menu": [
+        { "name": "Sew-in install", "duration": "3 hrs", "price": 180 },
+        { "name": "Closure install & style", "duration": "3.5 hrs", "price": 240 },
+        { "name": "Frontal install & customise", "duration": "4 hrs", "price": 300 }
+      ] }
+  ]
+}

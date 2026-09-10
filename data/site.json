@@ -1,0 +1,29 @@
+{
+  "name": "Halo",
+  "tagline": "Hair Studio",
+  "city": "Chicago",
+  "hero": { "line1": "Your hair.", "line2": "Your era.", "sub": "Cut. Colour. Extensions." },
+  "intro": "Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair. Book a seat or shop the hair, whichever you came for.",
+  "address": { "line1": "1642 N Damen Ave", "line2": "Chicago, IL 60647" },
+  "phone": "(555) 555-0172",
+  "email": "hello@halohair.example",
+  "instagram": "@halo.hair",
+  "hours": [
+    { "days": "Tuesday to Friday", "time": "9:00am to 7:00pm" },
+    { "days": "Saturday", "time": "8:00am to 6:00pm" },
+    { "days": "Sunday and Monday", "time": "Closed" }
+  ],
+  "marquee": [
+    "Free shipping over $150",
+    "Raw hair, ethically sourced",
+    "Same-day installs available",
+    "Book online in 60 seconds",
+    "Ships in 1 to 3 business days"
+  ],
+  "demo": {
+    "show": true,
+    "text": "Demo site. Halo is a fictional salon, built to show what a small-business site can do.",
+    "linkText": "Made by Framework Studio",
+    "url": "https://tahvia127.github.io/framework-studio/"
+  }
+}

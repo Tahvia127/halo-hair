@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{NAME}} {{TAGLINE}} | Cut, colour &amp; extensions in {{CITY}}</title>
+<meta name="description" content="{{INTRO_SHORT}}">
+<meta property="og:title" content="{{NAME}} {{TAGLINE}}">
+<meta property="og:description" content="{{INTRO_SHORT}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Parisienne&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">{{JSONLD}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{{DEMOBAR}}
+
+<header class="nav" id="nav">
+  <div class="shell">
+    <a class="logo" href="#top"><span class="m">{{NAME}}</span><span class="s">{{TAGLINE}}</span></a>
+    <nav aria-label="Primary"><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#shop">Shop hair</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul></nav>
+    <div class="nav-right">
+      <button class="cart-btn" id="cartOpen" aria-haspopup="dialog">Bag <span class="cart-count" id="cartCount">0</span></button>
+      <a class="btn fill" href="#book">Book now</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top"><div class="shell">
+  <div>
+    <p class="eyebrow rv">Welcome to {{NAME}} <span class="spark">&#10022;</span></p>
+    <h1 class="rv">{{H1A}}<span class="b">{{H1B}}</span></h1>
+    <p class="sub rv">{{HSUB}}</p>
+    <div class="rv" style="display:flex;gap:.6rem;flex-wrap:wrap">
+      <a class="btn fill" href="#book">Book your look</a>
+      <a class="btn ghost" href="#shop">Shop the hair</a>
+    </div>
+  </div>
+  <figure class="hero-figure rv" style="margin:0">
+    <div class="in"><img src="assets/img/hero.webp" alt="A finished look at {{NAME}}" width="1500" height="1000" fetchpriority="high"></div>
+    <div class="badge" aria-hidden="true">Raw hair<br>&amp; installs<br>in house</div>
+  </figure>
+</div></section>
+
+<div class="marq" aria-hidden="true"><div class="marq-track" id="track"></div></div>
+
+<section class="section" id="services"><div class="shell">
+  <div class="head center rv">
+    <p class="pill">Our services</p>
+    <h2>Cut, colour <em>&amp; extensions</em></h2>
+    <p>{{INTRO}}</p>
+  </div>
+  <div class="svc-grid">{{SERVICES}}</div>
+  <div class="smenu">{{SERVICE_MENU}}</div>
+</div></section>
+
+<section class="section section-alt" id="shop"><div class="shell">
+  <div class="head center rv">
+    <p class="pill">Shop the hair</p>
+    <h2>The same bundles <em>we install</em></h2>
+    <p>Raw, ethically sourced and sold at the length you actually need. Pick a length, add to your bag, and we will have it ready.</p>
+  </div>
+  <div class="shop-grid">{{PRODUCTS}}</div>
+</div></section>
+
+<section class="section" id="book"><div class="shell">
+  <div class="head center rv">
+    <p class="pill">Booking</p>
+    <h2>Book in <em>sixty seconds</em></h2>
+    <p>Pick a service, pick a time, and you will get a text confirmation and a reminder the day before.</p>
+  </div>
+  <div class="book">
+    <div class="step rv" style="--i:0"><p class="n">One</p><h4>Choose a service</h4><p>Cut, colour or an extension install. Prices are on the service menu above, no surprises at the chair.</p></div>
+    <div class="step rv" style="--i:1"><p class="n">Two</p><h4>Pick a time</h4><p>Live availability, updated as the chair fills. Deposit holds the slot for installs over three hours.</p></div>
+    <div class="step rv" style="--i:2"><p class="n">Three</p><h4>Get confirmed</h4><p>Text confirmation straight away, and a reminder twenty-four hours before your appointment.</p></div>
+  </div>
+  <div class="head center rv" style="margin:2.8rem auto 0">
+    <p class="pill">Next available &mdash; Saturday</p>
+    <div class="slots" id="slots" role="group" aria-label="Available times on Saturday">
+      <button class="slot" type="button" aria-pressed="false">9:00 am</button>
+      <button class="slot" type="button" aria-pressed="false">10:30 am</button>
+      <button class="slot" type="button" disabled>12:00 pm</button>
+      <button class="slot" type="button" aria-pressed="false">1:30 pm</button>
+      <button class="slot" type="button" aria-pressed="false">3:00 pm</button>
+      <button class="slot" type="button" disabled>4:30 pm</button>
+    </div>
+    <p style="margin-top:1.6rem"><a class="btn fill" href="tel:{{PHONE_RAW}}" id="bookCta">Confirm booking</a></p>
+    <p style="font-size:.72rem;color:var(--faint);margin-top:.9rem">Demo booking. In production this connects to Square Appointments or Calendly, which handles the calendar, deposit and SMS reminders.</p>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="shell split">
+  <div class="im rv"><img src="assets/img/about.webp" alt="A client at {{NAME}}" loading="lazy" width="1100" height="733"></div>
+  <div class="rv">
+    <p class="pill">The studio</p>
+    <h2>Hair that suits <em>your life</em></h2>
+    <p>We start every appointment with a consultation, because the best cut is the one you can actually maintain between visits. If you want extensions, we will match texture in daylight before anything is installed.</p>
+    <p>Everything we sell is hair we have worked with ourselves on the chair.</p>
+    <a class="btn ghost" href="#book">Book a consultation</a>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="head center rv"><p class="pill">Insta glam</p><h2>Fresh looks <em>from the chair</em></h2></div>
+  <div class="gal">{{GALLERY}}</div>
+</div></section>
+
+<section class="section section-alt" id="visit"><div class="shell">
+  <div class="head center rv"><p class="pill">Visit</p><h2>Find <em>us</em></h2></div>
+  <div class="info">
+    <div class="rv"><h4>Hours</h4><ul>{{HOURS}}</ul></div>
+    <div class="rv"><h4>Studio</h4><p>{{ADDR1}}<br>{{ADDR2}}</p></div>
+    <div class="rv"><h4>Get in touch</h4>
+      <p><a href="tel:{{PHONE_RAW}}">{{PHONE}}</a></p>
+      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+      <p>{{INSTAGRAM}}</p></div>
+    <div class="rv"><h4>Shipping</h4><p>Hair ships in one to three business days. Free over $150 within the US.</p></div>
+  </div>
+</div></section>
+
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-label="Your bag" aria-hidden="true">
+  <header><h2>Your bag</h2><button class="close" id="cartClose" aria-label="Close bag">&times;</button></header>
+  <ul class="items" id="cartItems"><li class="empty">Your bag is empty.</li></ul>
+  <footer>
+    <div class="sum"><span>Subtotal</span><b id="cartTotal">$0</b></div>
+    <button class="btn fill" style="width:100%;border:0" id="checkout">Checkout</button>
+    <p class="note">Demo bag. In production this hands off to Shopify or Stripe Checkout for payment and shipping.</p>
+  </footer>
+</aside>
+
+{{DEMOFOOT}}
+<footer><div class="shell">
+  <span>&copy; <span id="yr">2026</span> {{NAME}} {{TAGLINE}}</span>
+  <span>{{ADDR1}}, {{ADDR2}}</span>
+  <span><a href="tel:{{PHONE_RAW}}">{{PHONE}}</a></span>
+</div></footer>
+{{SCRIPT}}
+</body>
+</html>

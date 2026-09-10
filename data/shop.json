@@ -1,0 +1,86 @@
+{
+  "note": "Edit prices, lengths and stock here. Set featured true to show a product on the home page.",
+  "currency": "USD",
+  "products": [
+    {
+      "id": "raw-body",
+      "name": "Raw Body Wave",
+      "image": "shop-body",
+      "featured": true,
+      "blurb": "Soft S-wave that holds a curl and reverts after washing.",
+      "options": [
+        {
+          "length": "16\"",
+          "price": 145
+        },
+        {
+          "length": "20\"",
+          "price": 185
+        },
+        {
+          "length": "24\"",
+          "price": 235
+        }
+      ]
+    },
+    {
+      "id": "raw-straight",
+      "name": "Raw Straight",
+      "image": "shop-straight",
+      "featured": true,
+      "blurb": "Sleek, low-lustre and blends flat against a silk press.",
+      "options": [
+        {
+          "length": "16\"",
+          "price": 140
+        },
+        {
+          "length": "20\"",
+          "price": 180
+        },
+        {
+          "length": "24\"",
+          "price": 225
+        }
+      ]
+    },
+    {
+      "id": "raw-curly",
+      "name": "Raw Kinky Curly",
+      "image": "shop-curly",
+      "featured": true,
+      "blurb": "Tight coil pattern matched to 4a and 4b natural texture.",
+      "options": [
+        {
+          "length": "14\"",
+          "price": 155
+        },
+        {
+          "length": "18\"",
+          "price": 195
+        },
+        {
+          "length": "22\"",
+          "price": 245
+        }
+      ]
+    },
+    {
+      "id": "closure",
+      "name": "5x5 HD Closure",
+      "image": "shop-color",
+      "featured": true,
+      "blurb": "Melts flat, pre-plucked, and customised on the chair before you leave.",
+      "options": [
+        {
+          "length": "14\"",
+          "price": 120
+        },
+        {
+          "length": "18\"",
+          "price": 150
+        }
+      ]
+    }
+  ]
+}
