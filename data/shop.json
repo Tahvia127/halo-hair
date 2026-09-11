@@ -1,86 +1,48 @@
 {
-  "note": "Edit prices, lengths and stock here. Set featured true to show a product on the home page.",
+  "note": "Prices in USD. Every product lists the shades it comes in (codes from the shades list) and its lengths. Set featured true to show it on the home page.",
   "currency": "USD",
+  "shades": [
+    { "code": "1",   "name": "Jet Black",      "tone": ["#050404", "#0f0c0b", "#2a2522"], "note": "True black with a blue-cool shine. Best on very dark natural hair that has been dyed." },
+    { "code": "1B",  "name": "Off Black",      "tone": ["#0d0908", "#1d1512", "#3b2b25"], "note": "Our most-matched shade. Soft black with a hint of brown that blends with most natural hair." },
+    { "code": "2",   "name": "Darkest Brown",  "tone": ["#1a0f0b", "#2e1c14", "#4d3226"], "note": "Reads black indoors and espresso in daylight." },
+    { "code": "4",   "name": "Chocolate",      "tone": ["#2a160d", "#45271a", "#6b4330"], "note": "Warm medium brown. A good middle ground if you are between shades." },
+    { "code": "6",   "name": "Chestnut",       "tone": ["#3b1d0f", "#653619", "#94592f"], "note": "Brown with red undertones that come alive in the sun." },
+    { "code": "30",  "name": "Auburn",         "tone": ["#4a1d0b", "#7a3616", "#aa5a2b"], "note": "Copper-brown. Pairs well with a 1B root for a lived-in look." },
+    { "code": "350", "name": "Copper",         "tone": ["#5c1f07", "#9a3d12", "#cf6a2d"], "note": "Bright ginger copper. Pre-lifted, so it will not go brassy." },
+    { "code": "27",  "name": "Honey Blonde",   "tone": ["#7a4415", "#b77428", "#e0a24f"], "note": "Golden honey. Our most requested colour on units." },
+    { "code": "613", "name": "Platinum",       "tone": ["#b39561", "#dcc592", "#f3e4bd"], "note": "Lifted blank canvas. Tone it to any pastel or wear it icy." },
+    { "code": "99J", "name": "Burgundy",       "tone": ["#2a0710", "#4d1020", "#7a2638"], "note": "Deep wine. Looks near-black until the light catches it." }
+  ],
+  "categories": [
+    { "slug": "bundles", "name": "Bundles",       "image": "col-bundles", "focus": "50% 20%" },
+    { "slug": "units",   "name": "Lace units",    "image": "col-units",   "focus": "50% 40%" },
+    { "slug": "curls",   "name": "Curls & coils", "image": "col-curls",   "focus": "50% 25%" },
+    { "slug": "care",    "name": "Aftercare",     "image": "col-care",    "focus": "50% 50%" }
+  ],
   "products": [
-    {
-      "id": "raw-body",
-      "name": "Raw Body Wave",
-      "image": "shop-body",
-      "featured": true,
-      "blurb": "Soft S-wave that holds a curl and reverts after washing.",
-      "options": [
-        {
-          "length": "16\"",
-          "price": 145
-        },
-        {
-          "length": "20\"",
-          "price": 185
-        },
-        {
-          "length": "24\"",
-          "price": 235
-        }
-      ]
-    },
-    {
-      "id": "raw-straight",
-      "name": "Raw Straight",
-      "image": "shop-straight",
-      "featured": true,
-      "blurb": "Sleek, low-lustre and blends flat against a silk press.",
-      "options": [
-        {
-          "length": "16\"",
-          "price": 140
-        },
-        {
-          "length": "20\"",
-          "price": 180
-        },
-        {
-          "length": "24\"",
-          "price": 225
-        }
-      ]
-    },
-    {
-      "id": "raw-curly",
-      "name": "Raw Kinky Curly",
-      "image": "shop-curly",
-      "featured": true,
-      "blurb": "Tight coil pattern matched to 4a and 4b natural texture.",
-      "options": [
-        {
-          "length": "14\"",
-          "price": 155
-        },
-        {
-          "length": "18\"",
-          "price": 195
-        },
-        {
-          "length": "22\"",
-          "price": 245
-        }
-      ]
-    },
-    {
-      "id": "closure",
-      "name": "5x5 HD Closure",
-      "image": "shop-color",
-      "featured": true,
-      "blurb": "Melts flat, pre-plucked, and customised on the chair before you leave.",
-      "options": [
-        {
-          "length": "14\"",
-          "price": 120
-        },
-        {
-          "length": "18\"",
-          "price": 150
-        }
-      ]
-    }
+    { "id": "raw-straight", "name": "Raw Straight Bundle", "cat": "bundles", "image": "prod-straight", "featured": true, "tag": "Best seller",
+      "blurb": "Sleek and low-lustre. Blends flat against a silk press and holds a curl for days.",
+      "shades": ["1B", "2", "4"],
+      "options": [ { "length": "16\"", "price": 140 }, { "length": "20\"", "price": 180 }, { "length": "24\"", "price": 225 } ] },
+    { "id": "raw-body", "name": "Raw Body Wave Bundle", "cat": "bundles", "image": "prod-body", "featured": true,
+      "blurb": "A soft S-wave that reverts after washing. The easiest texture to wear straight or curly.",
+      "shades": ["1B", "4", "6", "30"],
+      "options": [ { "length": "16\"", "price": 145 }, { "length": "20\"", "price": 185 }, { "length": "24\"", "price": 235 } ] },
+    { "id": "raw-curly", "name": "Raw Kinky Curly Bundle", "cat": "curls", "image": "prod-curly", "featured": true, "tag": "New",
+      "blurb": "Tight coil pattern matched to 4a and 4b natural texture, so leave-out disappears.",
+      "shades": ["1B", "2"],
+      "options": [ { "length": "14\"", "price": 155 }, { "length": "18\"", "price": 195 }, { "length": "22\"", "price": 245 } ] },
+    { "id": "honey-unit", "name": "Honey 13x4 Lace Unit", "cat": "units", "image": "prod-honey", "featured": true, "tag": "Best seller",
+      "blurb": "Pre-plucked HD lace with a shadow root. Customised and fitted free when you book an install.",
+      "shades": ["27", "350", "613"],
+      "options": [ { "length": "18\"", "price": 320 }, { "length": "22\"", "price": 380 }, { "length": "26\"", "price": 440 } ] },
+    { "id": "curly-unit", "name": "Deep Curl Glueless Unit", "cat": "curls", "image": "prod-curlyunit", "featured": true,
+      "blurb": "Pull on, adjust the band, go. No glue, no lace to lay, and the curls hold without product.",
+      "shades": ["1", "1B", "99J"],
+      "options": [ { "length": "16\"", "price": 260 }, { "length": "20\"", "price": 300 } ] },
+    { "id": "care-kit", "name": "The Aftercare Kit", "cat": "care", "image": "prod-care", "featured": true,
+      "blurb": "Sulphate-free wash, a light leave-in, silk scrunchie and a boar bristle brush. Everything your install needs.",
+      "shades": [],
+      "options": [ { "length": "Full kit", "price": 68 }, { "length": "Travel", "price": 38 } ] }
   ]
 }

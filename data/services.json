@@ -1,22 +1,46 @@
 {
+  "note": "Durations are in minutes. Any service at or over depositOver minutes asks for a deposit when booked.",
+  "depositOver": 180,
+  "deposit": 50,
   "services": [
-    { "slug": "cut", "name": "Cut", "blurb": "Precision cuts that grow out well, not just look good on day one.", "image": "svc-cut", "from": 85,
+    { "slug": "press", "name": "Silk", "em": "Press", "image": "svc-press",
+      "blurb": "Heat done gently: a deep cleanse, a proper blowout and a press that moves, with heat protection at every pass.",
       "menu": [
-        { "name": "Signature cut & style", "duration": "60 min", "price": 85 },
-        { "name": "Silk press & trim", "duration": "90 min", "price": 120 },
-        { "name": "Big chop consultation", "duration": "30 min", "price": 45 }
+        { "name": "Silk press", "mins": 90, "price": 95 },
+        { "name": "Silk press & trim", "mins": 120, "price": 120 },
+        { "name": "Press refresh (within 2 weeks)", "mins": 60, "price": 65 }
       ] },
-    { "slug": "colour", "name": "Colour", "blurb": "Balayage, gloss and full colour, always with a strand test first.", "image": "svc-color", "from": 145,
+    { "slug": "braids", "name": "Knotless", "em": "Braids", "image": "svc-braids",
+      "blurb": "Light at the root, no tension bumps, finished in one sitting. Hair is included in every braid price.",
       "menu": [
-        { "name": "Gloss & tone", "duration": "45 min", "price": 145 },
-        { "name": "Partial balayage", "duration": "2.5 hrs", "price": 260 },
-        { "name": "Full colour correction", "duration": "consult", "price": 400 }
+        { "name": "Knotless, shoulder length", "mins": 240, "price": 220 },
+        { "name": "Knotless, mid-back", "mins": 300, "price": 260 },
+        { "name": "Boho knotless, mid-back", "mins": 330, "price": 300 },
+        { "name": "Feed-in cornrows", "mins": 120, "price": 110 }
       ] },
-    { "slug": "extensions", "name": "Extensions", "blurb": "Sew-ins, closures and frontals, fitted and blended on the chair.", "image": "svc-style", "from": 180,
+    { "slug": "installs", "name": "Sew-ins &", "em": "Installs", "image": "svc-install",
+      "blurb": "Sew-ins, closures and lace units, fitted and blended on the chair. Bring your own hair or use ours.",
       "menu": [
-        { "name": "Sew-in install", "duration": "3 hrs", "price": 180 },
-        { "name": "Closure install & style", "duration": "3.5 hrs", "price": 240 },
-        { "name": "Frontal install & customise", "duration": "4 hrs", "price": 300 }
+        { "name": "Traditional sew-in", "mins": 180, "price": 180 },
+        { "name": "Closure sew-in & style", "mins": 210, "price": 240 },
+        { "name": "Frontal install & customise", "mins": 240, "price": 300 },
+        { "name": "Glueless unit fit", "mins": 90, "price": 120 }
+      ] },
+    { "slug": "colour", "name": "Bespoke", "em": "Colour", "image": "svc-colour",
+      "blurb": "Honey, copper, jet or burgundy, always with a strand test first and a bond builder in the bowl.",
+      "menu": [
+        { "name": "Gloss & tone", "mins": 60, "price": 85 },
+        { "name": "All-over colour", "mins": 120, "price": 150 },
+        { "name": "Highlights & balayage", "mins": 180, "price": 240 },
+        { "name": "Unit or bundle colour", "mins": 120, "price": 130 }
+      ] },
+    { "slug": "natural", "name": "Natural", "em": "Care", "image": "svc-natural",
+      "blurb": "Wash-and-gos, twist-outs and trims for natural hair, plus the treatments that keep it growing.",
+      "menu": [
+        { "name": "Wash & go", "mins": 75, "price": 80 },
+        { "name": "Two-strand twists", "mins": 150, "price": 140 },
+        { "name": "Deep treatment & steam", "mins": 45, "price": 45 },
+        { "name": "Curly cut & shape", "mins": 75, "price": 90 }
       ] }
   ]
 }

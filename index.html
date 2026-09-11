@@ -3,340 +3,551 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Halo Hair Studio | Cut, colour &amp; extensions in Chicago</title>
-<meta name="description" content="Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair.">
+<title>Halo Hair Studio | Silk press, braids, installs &amp; raw hair in Chicago</title>
+<meta name="description" content="Halo is a hair studio and extensions house in Wicker Park, Chicago. We press, braid, install and colour, and we sell the same raw bundles and lace units we use on the chair.">
 <meta property="og:title" content="Halo Hair Studio">
-<meta property="og:description" content="Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair.">
+<meta property="og:description" content="Halo is a hair studio and extensions house in Wicker Park, Chicago. We press, braid, install and colour, and we sell the same raw bundles and lace units we use on the chair.">
+<meta property="og:image" content="assets/img/hero.webp">
+<meta name="theme-color" content="#FBF6F1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F8D5E1'/%3E%3Cellipse cx='32' cy='21' rx='15' ry='5' fill='none' stroke='%23B8924A' stroke-width='3'/%3E%3Ctext x='32' y='49' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%232A1D1A'%3EH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Parisienne&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Halo Hair Studio","description":"Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair. Book a seat or shop the hair, whichever you came for.","telephone":"(555) 555-0172","email":"hello@halohair.example","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"1642 N Damen Ave","addressLocality":"Chicago"}}</script>
+<link rel="preload" as="image" href="assets/img/hero.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Halo Hair Studio","description":"Halo is a hair studio and extensions house in Wicker Park, Chicago. We press, braid, install and colour, and we sell the same raw bundles and lace units we use on the chair.","image":"assets/img/hero.webp","telephone":"(555) 555-0172","email":"hello@halohair.example","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"1642 N Damen Ave","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60647","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"17:00"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="demo-bar" role="note"><p>Demo site. Halo is a fictional salon, built to show what a small-business site can do.</p><span class="sep">&middot;</span>
   <a href="https://tahvia127.github.io/framework-studio/" target="_blank" rel="noopener noreferrer">Made by Framework Studio</a></div>
 
+<div class="announce" role="region" aria-label="Studio news">
+  <button class="ann-btn" type="button" id="annPrev" aria-label="Previous message">&lsaquo;</button>
+  <p id="annText" aria-live="polite">Now booking new clients for October</p>
+  <button class="ann-btn" type="button" id="annNext" aria-label="Next message">&rsaquo;</button>
+</div>
+
 <header class="nav" id="nav">
-  <div class="shell">
-    <a class="logo" href="#top"><span class="m">Halo</span><span class="s">Hair Studio</span></a>
-    <nav aria-label="Primary"><ul>
+  <div class="nav-in">
+    <nav class="nav-l" aria-label="Primary"><ul>
       <li><a href="#services">Services</a></li>
       <li><a href="#shop">Shop hair</a></li>
-      <li><a href="#book">Book</a></li>
+      <li><a href="#shades">Shades</a></li>
       <li><a href="#visit">Visit</a></li>
     </ul></nav>
-    <div class="nav-right">
-      <button class="cart-btn" id="cartOpen" aria-haspopup="dialog">Bag <span class="cart-count" id="cartCount">0</span></button>
-      <a class="btn fill" href="#book">Book now</a>
+    <a class="logo" href="#top" aria-label="Halo Hair Studio, back to top">
+      <span class="m">Halo<svg class="ring" viewBox="0 0 60 14" aria-hidden="true"><ellipse cx="30" cy="7" rx="27" ry="4.6"/></svg></span>
+      <span class="s">hair studio</span>
+    </a>
+    <div class="nav-r">
+      <a class="btn pill hide-sm" href="#book">Book appointment <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <button class="bag-btn" id="cartOpen" type="button" aria-haspopup="dialog" aria-label="Open bag, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hero" id="top"><div class="shell">
-  <div>
-    <p class="eyebrow rv">Welcome to Halo <span class="spark">&#10022;</span></p>
-    <h1 class="rv">Your hair.<span class="b">Your era.</span></h1>
-    <p class="sub rv">Cut. Colour. Extensions.</p>
-    <div class="rv" style="display:flex;gap:.6rem;flex-wrap:wrap">
-      <a class="btn fill" href="#book">Book your look</a>
-      <a class="btn ghost" href="#shop">Shop the hair</a>
+<!-- hero -->
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <p class="eyebrow ld" style="--d:0">Wicker Park &middot; Chicago</p>
+    <h1 class="ld" style="--d:1">Laid, lifted &amp;<br><span class="mark"><svg class="halo-arc" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="100" cy="20" rx="96" ry="15"/></svg><em>entirely you.</em></span></h1>
+    <p class="sub ld" style="--d:2">Silk presses, knotless braids, installs and colour in Wicker Park. Plus the raw bundles and lace units we trust on the chair, shipped to your door.</p>
+    <div class="cta ld" style="--d:3">
+      <a class="btn pill fill" href="#book">Book appointment <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a class="tlink" href="#shop">Shop the hair</a>
+    </div>
+    <ul class="hero-facts ld" style="--d:4">
+      <li><b>5</b> services</li>
+      <li><b>10</b> shades in stock</li>
+      <li><b>1&ndash;3</b> day shipping</li>
+    </ul>
+  </div>
+  <figure class="hero-arch ld" style="--d:2">
+    <div class="arch"><img src="assets/img/hero.webp" alt="A client with waist-length knotless braids in a denim jacket" width="1300" height="1950" fetchpriority="high"></div>
+    <figcaption class="hero-tag"><span>Now booking</span> knotless &middot; installs &middot; silk press</figcaption>
+    <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <text><textPath href="#circ" textLength="272" lengthAdjust="spacing">raw hair &#10022; real installs &#10022; wicker park &#10022;</textPath></text><circle cx="60" cy="60" r="5"/></svg>
+  </figure>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-track"><span>Silk press Tuesdays</span><i>&#10022;</i><span>Raw hair, ethically sourced</span><i>&#10022;</i><span>Knotless in one sitting</span><i>&#10022;</i><span>Sew-ins that last eight weeks</span><i>&#10022;</i><span>Ships in 1 to 3 days</span><i>&#10022;</i><span>Silk press Tuesdays</span><i>&#10022;</i><span>Raw hair, ethically sourced</span><i>&#10022;</i><span>Knotless in one sitting</span><i>&#10022;</i><span>Sew-ins that last eight weeks</span><i>&#10022;</i><span>Ships in 1 to 3 days</span><i>&#10022;</i><span>Silk press Tuesdays</span><i>&#10022;</i><span>Raw hair, ethically sourced</span><i>&#10022;</i><span>Knotless in one sitting</span><i>&#10022;</i><span>Sew-ins that last eight weeks</span><i>&#10022;</i><span>Ships in 1 to 3 days</span><i>&#10022;</i><span>Silk press Tuesdays</span><i>&#10022;</i><span>Raw hair, ethically sourced</span><i>&#10022;</i><span>Knotless in one sitting</span><i>&#10022;</i><span>Sew-ins that last eight weeks</span><i>&#10022;</i><span>Ships in 1 to 3 days</span><i>&#10022;</i></div></div>
+
+<!-- welcome -->
+<section class="welcome" id="welcome">
+  <div class="shell w-grid">
+    <div class="w-copy rv">
+      <p class="eyebrow">Welcome in</p>
+      <h2>Your texture <em>leads.</em><br>We follow it.</h2>
+      <p>Every appointment starts with a proper look at your hair in daylight: what it does, what it hates, and what you actually have time for on a Tuesday morning. Then we build the style around that, not the other way round.</p>
+      <a class="tlink" href="#studio">Meet the studio</a>
+    </div>
+    <div class="disc rv" aria-hidden="true">
+      <span class="orbit"></span><span class="orbit o2"></span>
+      
+  <svg class="tool t-scissors" data-speed="-0.18" viewBox="0 0 120 120" aria-hidden="true">
+    <polygon points="61.3,66.0 117.1,43.5 58.7,58.0 51.6,62.1 53.2,66.9" fill="#D9B872"/>
+    <polygon points="63.7,64.0 88.2,9.0 56.3,60.0 54.0,67.9 58.5,70.2" fill="#C9A45A"/>
+    <g fill="none" stroke="#B8924A" stroke-width="4.5" stroke-linecap="round">
+      <path d="M60 62 L49.7 81.4"/><path d="M60 62 L39.1 68.8"/>
+      <circle cx="44" cy="92" r="10"/><circle cx="27.7" cy="72.5" r="10"/></g>
+    <circle cx="60" cy="62" r="3.2" fill="#8A6A2C"/>
+  </svg>
+  <svg class="tool t-dryer" data-speed="0.14" viewBox="0 0 160 150" aria-hidden="true">
+    <rect x="78" y="34" width="70" height="30" rx="7" fill="#F2B3C7"/>
+    <rect x="140" y="30" width="14" height="38" rx="4" fill="#C9A45A"/>
+    <circle cx="60" cy="49" r="38" fill="#F4BFD0"/><circle cx="60" cy="49" r="24" fill="#F8D5E1"/>
+    <circle cx="60" cy="49" r="10" fill="#C9A45A"/>
+    <rect x="50" y="78" width="22" height="58" rx="10" fill="#EFA9BF" transform="rotate(-8 61 107)"/>
+    <path d="M58 136 C 54 146, 44 148, 36 146" fill="none" stroke="#C9A45A" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  <svg class="tool t-brush" data-speed="0.22" viewBox="0 0 70 190" aria-hidden="true">
+    <rect x="22" y="104" width="26" height="80" rx="13" fill="#F2B3C7"/>
+    <rect x="24" y="96" width="22" height="12" rx="3" fill="#B8924A"/>
+    <rect x="12" y="8" width="46" height="90" rx="10" fill="#C9A45A"/>
+    <g fill="#8A6A2C"><circle cx="18" cy="16" r="2.4"/><circle cx="29.5" cy="16" r="2.4"/><circle cx="41" cy="16" r="2.4"/><circle cx="52.5" cy="16" r="2.4"/><circle cx="18" cy="30" r="2.4"/><circle cx="29.5" cy="30" r="2.4"/><circle cx="41" cy="30" r="2.4"/><circle cx="52.5" cy="30" r="2.4"/><circle cx="18" cy="44" r="2.4"/><circle cx="29.5" cy="44" r="2.4"/><circle cx="41" cy="44" r="2.4"/><circle cx="52.5" cy="44" r="2.4"/><circle cx="18" cy="58" r="2.4"/><circle cx="29.5" cy="58" r="2.4"/><circle cx="41" cy="58" r="2.4"/><circle cx="52.5" cy="58" r="2.4"/><circle cx="18" cy="72" r="2.4"/><circle cx="29.5" cy="72" r="2.4"/><circle cx="41" cy="72" r="2.4"/><circle cx="52.5" cy="72" r="2.4"/><circle cx="18" cy="86" r="2.4"/><circle cx="29.5" cy="86" r="2.4"/><circle cx="41" cy="86" r="2.4"/><circle cx="52.5" cy="86" r="2.4"/></g>
+  </svg>
+  <svg class="tool t-comb" data-speed="-0.12" viewBox="0 0 170 60" aria-hidden="true">
+    <rect x="6" y="6" width="158" height="16" rx="6" fill="#F4BFD0"/>
+    <g fill="#F4BFD0"><rect x="10" y="18" width="4.4" height="34" rx="2"/><rect x="18" y="18" width="4.4" height="34" rx="2"/><rect x="26" y="18" width="4.4" height="34" rx="2"/><rect x="34" y="18" width="4.4" height="34" rx="2"/><rect x="42" y="18" width="4.4" height="34" rx="2"/><rect x="50" y="18" width="4.4" height="34" rx="2"/><rect x="58" y="18" width="4.4" height="34" rx="2"/><rect x="66" y="18" width="4.4" height="26" rx="2"/><rect x="74" y="18" width="4.4" height="26" rx="2"/><rect x="82" y="18" width="4.4" height="26" rx="2"/><rect x="90" y="18" width="4.4" height="26" rx="2"/><rect x="98" y="18" width="4.4" height="26" rx="2"/><rect x="106" y="18" width="4.4" height="26" rx="2"/><rect x="114" y="18" width="4.4" height="26" rx="2"/><rect x="122" y="18" width="4.4" height="26" rx="2"/><rect x="130" y="18" width="4.4" height="26" rx="2"/><rect x="138" y="18" width="4.4" height="26" rx="2"/><rect x="146" y="18" width="4.4" height="26" rx="2"/><rect x="154" y="18" width="4.4" height="26" rx="2"/></g>
+  </svg>
+  <svg class="tool t-spark s1" data-speed="0.3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#C9A45A"/></svg>
+  <svg class="tool t-spark s2" data-speed="-0.25" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#EFA9BF"/></svg>
     </div>
   </div>
-  <figure class="hero-figure rv" style="margin:0">
-    <div class="in"><img src="assets/img/hero.webp" alt="A finished look at Halo" width="1500" height="1000" fetchpriority="high"></div>
-    <div class="badge" aria-hidden="true">Raw hair<br>&amp; installs<br>in house</div>
-  </figure>
-</div></section>
+</section>
 
-<div class="marq" aria-hidden="true"><div class="marq-track" id="track"></div></div>
-
-<section class="section" id="services"><div class="shell">
-  <div class="head center rv">
-    <p class="pill">Our services</p>
-    <h2>Cut, colour <em>&amp; extensions</em></h2>
-    <p>Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair. Book a seat or shop the hair, whichever you came for.</p>
+<!-- services -->
+<section class="services" id="services">
+  <div class="shell sec-head rv">
+    <div><p class="eyebrow">The menu</p><h2>Five things <em>we do beautifully</em></h2></div>
+    <p>Open a service to see every price and how long it takes. Braid prices include the hair.</p>
   </div>
-  <div class="svc-grid">
-      <a class="svc rv" style="--i:0" href="#book">
-        <img src="assets/img/svc-cut.webp" alt="Cut at Halo" loading="lazy" width="900" height="1080">
-        <div class="cap">
-          <h3>Cut</h3>
-          <p>Precision cuts that grow out well, not just look good on day one.</p>
-          <span class="from">From $85</span>
+  <ul class="rows">
+    <li class="row" data-img="assets/img/svc-press.webp">
+      <h3><button class="row-h" type="button" aria-expanded="false" aria-controls="svc-press">
+        <span class="num">01</span>
+        <span class="ttl">Silk <em>Press</em></span>
+        <span class="from">from $65</span>
+        <span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="row-b" id="svc-press" role="region" aria-label="Silk Press prices"><div class="row-clip"><div class="row-in shell">
+        <img src="assets/img/svc-press.webp" alt="Silk Press at Halo" loading="lazy" width="880" height="1100">
+        <div>
+          <p class="bl">Heat done gently: a deep cleanse, a proper blowout and a press that moves, with heat protection at every pass.</p>
+          <ul class="menu">
+            <li><span class="nm">Silk press</span><span class="du">1 hr 30 min</span><span class="pr">$95</span>
+              <button class="mini" type="button" data-book="press:0" aria-label="Book Silk press">Book</button></li>
+            <li><span class="nm">Silk press &amp; trim</span><span class="du">2 hrs</span><span class="pr">$120</span>
+              <button class="mini" type="button" data-book="press:1" aria-label="Book Silk press &amp; trim">Book</button></li>
+            <li><span class="nm">Press refresh (within 2 weeks)</span><span class="du">1 hr</span><span class="pr">$65</span>
+              <button class="mini" type="button" data-book="press:2" aria-label="Book Press refresh (within 2 weeks)">Book</button></li>
+          </ul>
         </div>
-      </a>
-      <a class="svc rv" style="--i:1" href="#book">
-        <img src="assets/img/svc-color.webp" alt="Colour at Halo" loading="lazy" width="900" height="1080">
-        <div class="cap">
-          <h3>Colour</h3>
-          <p>Balayage, gloss and full colour, always with a strand test first.</p>
-          <span class="from">From $145</span>
+      </div></div></div>
+    </li>
+    <li class="row" data-img="assets/img/svc-braids.webp">
+      <h3><button class="row-h" type="button" aria-expanded="false" aria-controls="svc-braids">
+        <span class="num">02</span>
+        <span class="ttl">Knotless <em>Braids</em></span>
+        <span class="from">from $110</span>
+        <span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="row-b" id="svc-braids" role="region" aria-label="Knotless Braids prices"><div class="row-clip"><div class="row-in shell">
+        <img src="assets/img/svc-braids.webp" alt="Knotless Braids at Halo" loading="lazy" width="880" height="1100">
+        <div>
+          <p class="bl">Light at the root, no tension bumps, finished in one sitting. Hair is included in every braid price.</p>
+          <ul class="menu">
+            <li><span class="nm">Knotless, shoulder length</span><span class="du">4 hrs</span><span class="pr">$220</span>
+              <button class="mini" type="button" data-book="braids:0" aria-label="Book Knotless, shoulder length">Book</button></li>
+            <li><span class="nm">Knotless, mid-back</span><span class="du">5 hrs</span><span class="pr">$260</span>
+              <button class="mini" type="button" data-book="braids:1" aria-label="Book Knotless, mid-back">Book</button></li>
+            <li><span class="nm">Boho knotless, mid-back</span><span class="du">5 hrs 30 min</span><span class="pr">$300</span>
+              <button class="mini" type="button" data-book="braids:2" aria-label="Book Boho knotless, mid-back">Book</button></li>
+            <li><span class="nm">Feed-in cornrows</span><span class="du">2 hrs</span><span class="pr">$110</span>
+              <button class="mini" type="button" data-book="braids:3" aria-label="Book Feed-in cornrows">Book</button></li>
+          </ul>
         </div>
-      </a>
-      <a class="svc rv" style="--i:2" href="#book">
-        <img src="assets/img/svc-style.webp" alt="Extensions at Halo" loading="lazy" width="900" height="1080">
-        <div class="cap">
-          <h3>Extensions</h3>
-          <p>Sew-ins, closures and frontals, fitted and blended on the chair.</p>
-          <span class="from">From $180</span>
+      </div></div></div>
+    </li>
+    <li class="row" data-img="assets/img/svc-install.webp">
+      <h3><button class="row-h" type="button" aria-expanded="false" aria-controls="svc-installs">
+        <span class="num">03</span>
+        <span class="ttl">Sew-ins &amp; <em>Installs</em></span>
+        <span class="from">from $120</span>
+        <span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="row-b" id="svc-installs" role="region" aria-label="Sew-ins &amp; Installs prices"><div class="row-clip"><div class="row-in shell">
+        <img src="assets/img/svc-install.webp" alt="Sew-ins &amp; Installs at Halo" loading="lazy" width="880" height="1100">
+        <div>
+          <p class="bl">Sew-ins, closures and lace units, fitted and blended on the chair. Bring your own hair or use ours.</p>
+          <ul class="menu">
+            <li><span class="nm">Traditional sew-in</span><span class="du">3 hrs</span><span class="pr">$180</span>
+              <button class="mini" type="button" data-book="installs:0" aria-label="Book Traditional sew-in">Book</button></li>
+            <li><span class="nm">Closure sew-in &amp; style</span><span class="du">3 hrs 30 min</span><span class="pr">$240</span>
+              <button class="mini" type="button" data-book="installs:1" aria-label="Book Closure sew-in &amp; style">Book</button></li>
+            <li><span class="nm">Frontal install &amp; customise</span><span class="du">4 hrs</span><span class="pr">$300</span>
+              <button class="mini" type="button" data-book="installs:2" aria-label="Book Frontal install &amp; customise">Book</button></li>
+            <li><span class="nm">Glueless unit fit</span><span class="du">1 hr 30 min</span><span class="pr">$120</span>
+              <button class="mini" type="button" data-book="installs:3" aria-label="Book Glueless unit fit">Book</button></li>
+          </ul>
         </div>
-      </a></div>
-  <div class="smenu">
-      <div class="rv">
-        <h4>Cut</h4>
-        <ul>
-          <li>
-            <div class="row"><span class="nm">Signature cut &amp; style</span><span class="dot"></span><span class="pr">$85</span></div>
-            <span class="du">60 min</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Silk press &amp; trim</span><span class="dot"></span><span class="pr">$120</span></div>
-            <span class="du">90 min</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Big chop consultation</span><span class="dot"></span><span class="pr">$45</span></div>
-            <span class="du">30 min</span>
-          </li>
-        </ul>
-      </div>
-      <div class="rv">
-        <h4>Colour</h4>
-        <ul>
-          <li>
-            <div class="row"><span class="nm">Gloss &amp; tone</span><span class="dot"></span><span class="pr">$145</span></div>
-            <span class="du">45 min</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Partial balayage</span><span class="dot"></span><span class="pr">$260</span></div>
-            <span class="du">2.5 hrs</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Full colour correction</span><span class="dot"></span><span class="pr">$400</span></div>
-            <span class="du">consult</span>
-          </li>
-        </ul>
-      </div>
-      <div class="rv">
-        <h4>Extensions</h4>
-        <ul>
-          <li>
-            <div class="row"><span class="nm">Sew-in install</span><span class="dot"></span><span class="pr">$180</span></div>
-            <span class="du">3 hrs</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Closure install &amp; style</span><span class="dot"></span><span class="pr">$240</span></div>
-            <span class="du">3.5 hrs</span>
-          </li>
-          <li>
-            <div class="row"><span class="nm">Frontal install &amp; customise</span><span class="dot"></span><span class="pr">$300</span></div>
-            <span class="du">4 hrs</span>
-          </li>
-        </ul>
-      </div></div>
-</div></section>
+      </div></div></div>
+    </li>
+    <li class="row" data-img="assets/img/svc-colour.webp">
+      <h3><button class="row-h" type="button" aria-expanded="false" aria-controls="svc-colour">
+        <span class="num">04</span>
+        <span class="ttl">Bespoke <em>Colour</em></span>
+        <span class="from">from $85</span>
+        <span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="row-b" id="svc-colour" role="region" aria-label="Bespoke Colour prices"><div class="row-clip"><div class="row-in shell">
+        <img src="assets/img/svc-colour.webp" alt="Bespoke Colour at Halo" loading="lazy" width="880" height="1100">
+        <div>
+          <p class="bl">Honey, copper, jet or burgundy, always with a strand test first and a bond builder in the bowl.</p>
+          <ul class="menu">
+            <li><span class="nm">Gloss &amp; tone</span><span class="du">1 hr</span><span class="pr">$85</span>
+              <button class="mini" type="button" data-book="colour:0" aria-label="Book Gloss &amp; tone">Book</button></li>
+            <li><span class="nm">All-over colour</span><span class="du">2 hrs</span><span class="pr">$150</span>
+              <button class="mini" type="button" data-book="colour:1" aria-label="Book All-over colour">Book</button></li>
+            <li><span class="nm">Highlights &amp; balayage</span><span class="du">3 hrs</span><span class="pr">$240</span>
+              <button class="mini" type="button" data-book="colour:2" aria-label="Book Highlights &amp; balayage">Book</button></li>
+            <li><span class="nm">Unit or bundle colour</span><span class="du">2 hrs</span><span class="pr">$130</span>
+              <button class="mini" type="button" data-book="colour:3" aria-label="Book Unit or bundle colour">Book</button></li>
+          </ul>
+        </div>
+      </div></div></div>
+    </li>
+    <li class="row" data-img="assets/img/svc-natural.webp">
+      <h3><button class="row-h" type="button" aria-expanded="false" aria-controls="svc-natural">
+        <span class="num">05</span>
+        <span class="ttl">Natural <em>Care</em></span>
+        <span class="from">from $45</span>
+        <span class="plus" aria-hidden="true"></span>
+      </button></h3>
+      <div class="row-b" id="svc-natural" role="region" aria-label="Natural Care prices"><div class="row-clip"><div class="row-in shell">
+        <img src="assets/img/svc-natural.webp" alt="Natural Care at Halo" loading="lazy" width="880" height="1100">
+        <div>
+          <p class="bl">Wash-and-gos, twist-outs and trims for natural hair, plus the treatments that keep it growing.</p>
+          <ul class="menu">
+            <li><span class="nm">Wash &amp; go</span><span class="du">1 hr 15 min</span><span class="pr">$80</span>
+              <button class="mini" type="button" data-book="natural:0" aria-label="Book Wash &amp; go">Book</button></li>
+            <li><span class="nm">Two-strand twists</span><span class="du">2 hrs 30 min</span><span class="pr">$140</span>
+              <button class="mini" type="button" data-book="natural:1" aria-label="Book Two-strand twists">Book</button></li>
+            <li><span class="nm">Deep treatment &amp; steam</span><span class="du">45 min</span><span class="pr">$45</span>
+              <button class="mini" type="button" data-book="natural:2" aria-label="Book Deep treatment &amp; steam">Book</button></li>
+            <li><span class="nm">Curly cut &amp; shape</span><span class="du">1 hr 15 min</span><span class="pr">$90</span>
+              <button class="mini" type="button" data-book="natural:3" aria-label="Book Curly cut &amp; shape">Book</button></li>
+          </ul>
+        </div>
+      </div></div></div>
+    </li></ul>
+  <img class="peek" id="peek" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" aria-hidden="true">
+</section>
 
-<section class="section section-alt" id="shop"><div class="shell">
-  <div class="head center rv">
-    <p class="pill">Shop the hair</p>
-    <h2>The same bundles <em>we install</em></h2>
-    <p>Raw, ethically sourced and sold at the length you actually need. Pick a length, add to your bag, and we will have it ready.</p>
-  </div>
-  <div class="shop-grid">
-      <article class="prod rv" style="--i:0" data-id="raw-body" data-name="Raw Body Wave">
-        <div class="im"><img src="assets/img/shop-body.webp" alt="Raw Body Wave" loading="lazy" width="800" height="896"></div>
+<!-- shop -->
+<section class="shop" id="shop">
+  <div class="shell">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Shop the hair</p>
+      <h2>The same hair <em>we install</em></h2>
+      <p>Raw, ethically sourced and sold at the length you actually need. Every unit can be fitted and customised on the chair.</p>
+    </div>
+    <div class="cols">
+      <button class="col rv" style="--i:0" type="button" data-cat="bundles">
+        <span class="col-im"><img src="assets/img/col-bundles.webp" alt="" loading="lazy" width="900" height="1350" style="object-position:50% 20%"></span>
+        <span class="lbl"><b>Bundles</b><small>2 styles <span aria-hidden="true">&rarr;</span></small></span>
+      </button>
+      <button class="col rv" style="--i:1" type="button" data-cat="units">
+        <span class="col-im"><img src="assets/img/col-units.webp" alt="" loading="lazy" width="900" height="1350" style="object-position:50% 40%"></span>
+        <span class="lbl"><b>Lace units</b><small>1 style <span aria-hidden="true">&rarr;</span></small></span>
+      </button>
+      <button class="col rv" style="--i:2" type="button" data-cat="curls">
+        <span class="col-im"><img src="assets/img/col-curls.webp" alt="" loading="lazy" width="900" height="1350" style="object-position:50% 25%"></span>
+        <span class="lbl"><b>Curls &amp; coils</b><small>2 styles <span aria-hidden="true">&rarr;</span></small></span>
+      </button>
+      <button class="col rv" style="--i:3" type="button" data-cat="care">
+        <span class="col-im"><img src="assets/img/col-care.webp" alt="" loading="lazy" width="900" height="1350" style="object-position:50% 50%"></span>
+        <span class="lbl"><b>Aftercare</b><small>1 style <span aria-hidden="true">&rarr;</span></small></span>
+      </button></div>
+    <div class="filters" role="group" aria-label="Filter products">
+      <button class="chip" type="button" data-cat="all" aria-pressed="true">All hair</button><button class="chip" type="button" data-cat="bundles" aria-pressed="false">Bundles</button><button class="chip" type="button" data-cat="units" aria-pressed="false">Lace units</button><button class="chip" type="button" data-cat="curls" aria-pressed="false">Curls &amp; coils</button><button class="chip" type="button" data-cat="care" aria-pressed="false">Aftercare</button>
+      <span class="shade-filter" id="shadeFilter" hidden>Shade <b id="shadeFilterCode"></b> <button type="button" id="shadeClear" aria-label="Clear shade filter">&times;</button></span>
+    </div>
+    <div class="pgrid" id="pgrid">
+      <article class="prod rv" style="--i:0" data-id="raw-straight" data-name="Raw Straight Bundle" data-cat="bundles" data-shades="1B,2,4">
+        <div class="im">
+          <img src="assets/img/prod-straight.webp" alt="Raw Straight Bundle" loading="lazy" width="880" height="1100">
+          <span class="tag">Best seller</span>
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save Raw Straight Bundle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
         <div class="bd">
-          <h3>Raw Body Wave</h3>
-          <p class="bl">Soft S-wave that holds a curl and reverts after washing.</p>
-          <div class="lens" role="group" aria-label="Length for Raw Body Wave"><button class="len" type="button" data-price="145" aria-pressed="true">16&quot;</button><button class="len" type="button" data-price="185" aria-pressed="false">20&quot;</button><button class="len" type="button" data-price="235" aria-pressed="false">24&quot;</button></div>
-          <p class="price">$145</p>
-          <button class="add" type="button">Add to bag</button>
+          <h3>Raw Straight Bundle</h3>
+          <p class="bl">Sleek and low-lustre. Blends flat against a silk press and holds a curl for days.</p>
+          <div class="shd"><div class="dots" role="group" aria-label="Shade"><button class="dot" type="button" data-shade="1B" aria-pressed="true" aria-label="Shade 1B, Off Black" title="1B Off Black" style="--b:#1d1512;--l:#3b2b25"></button><button class="dot" type="button" data-shade="2" aria-pressed="false" aria-label="Shade 2, Darkest Brown" title="2 Darkest Brown" style="--b:#2e1c14;--l:#4d3226"></button><button class="dot" type="button" data-shade="4" aria-pressed="false" aria-label="Shade 4, Chocolate" title="4 Chocolate" style="--b:#45271a;--l:#6b4330"></button></div><span class="shd-nm">1B &middot; Off Black</span></div>
+          <div class="lens" role="group" aria-label="Length"><button class="len" type="button" data-price="140" aria-pressed="true">16&quot;</button><button class="len" type="button" data-price="180" aria-pressed="false">20&quot;</button><button class="len" type="button" data-price="225" aria-pressed="false">24&quot;</button></div>
+          <div class="buy"><p class="price">$140</p><button class="add" type="button">Add to bag</button></div>
         </div>
       </article>
-      <article class="prod rv" style="--i:1" data-id="raw-straight" data-name="Raw Straight">
-        <div class="im"><img src="assets/img/shop-straight.webp" alt="Raw Straight" loading="lazy" width="800" height="896"></div>
+      <article class="prod rv" style="--i:1" data-id="raw-body" data-name="Raw Body Wave Bundle" data-cat="bundles" data-shades="1B,4,6,30">
+        <div class="im">
+          <img src="assets/img/prod-body.webp" alt="Raw Body Wave Bundle" loading="lazy" width="880" height="1100">
+          
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save Raw Body Wave Bundle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
         <div class="bd">
-          <h3>Raw Straight</h3>
-          <p class="bl">Sleek, low-lustre and blends flat against a silk press.</p>
-          <div class="lens" role="group" aria-label="Length for Raw Straight"><button class="len" type="button" data-price="140" aria-pressed="true">16&quot;</button><button class="len" type="button" data-price="180" aria-pressed="false">20&quot;</button><button class="len" type="button" data-price="225" aria-pressed="false">24&quot;</button></div>
-          <p class="price">$140</p>
-          <button class="add" type="button">Add to bag</button>
+          <h3>Raw Body Wave Bundle</h3>
+          <p class="bl">A soft S-wave that reverts after washing. The easiest texture to wear straight or curly.</p>
+          <div class="shd"><div class="dots" role="group" aria-label="Shade"><button class="dot" type="button" data-shade="1B" aria-pressed="true" aria-label="Shade 1B, Off Black" title="1B Off Black" style="--b:#1d1512;--l:#3b2b25"></button><button class="dot" type="button" data-shade="4" aria-pressed="false" aria-label="Shade 4, Chocolate" title="4 Chocolate" style="--b:#45271a;--l:#6b4330"></button><button class="dot" type="button" data-shade="6" aria-pressed="false" aria-label="Shade 6, Chestnut" title="6 Chestnut" style="--b:#653619;--l:#94592f"></button><button class="dot" type="button" data-shade="30" aria-pressed="false" aria-label="Shade 30, Auburn" title="30 Auburn" style="--b:#7a3616;--l:#aa5a2b"></button></div><span class="shd-nm">1B &middot; Off Black</span></div>
+          <div class="lens" role="group" aria-label="Length"><button class="len" type="button" data-price="145" aria-pressed="true">16&quot;</button><button class="len" type="button" data-price="185" aria-pressed="false">20&quot;</button><button class="len" type="button" data-price="235" aria-pressed="false">24&quot;</button></div>
+          <div class="buy"><p class="price">$145</p><button class="add" type="button">Add to bag</button></div>
         </div>
       </article>
-      <article class="prod rv" style="--i:2" data-id="raw-curly" data-name="Raw Kinky Curly">
-        <div class="im"><img src="assets/img/shop-curly.webp" alt="Raw Kinky Curly" loading="lazy" width="800" height="896"></div>
+      <article class="prod rv" style="--i:2" data-id="raw-curly" data-name="Raw Kinky Curly Bundle" data-cat="curls" data-shades="1B,2">
+        <div class="im">
+          <img src="assets/img/prod-curly.webp" alt="Raw Kinky Curly Bundle" loading="lazy" width="880" height="1100">
+          <span class="tag">New</span>
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save Raw Kinky Curly Bundle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
         <div class="bd">
-          <h3>Raw Kinky Curly</h3>
-          <p class="bl">Tight coil pattern matched to 4a and 4b natural texture.</p>
-          <div class="lens" role="group" aria-label="Length for Raw Kinky Curly"><button class="len" type="button" data-price="155" aria-pressed="true">14&quot;</button><button class="len" type="button" data-price="195" aria-pressed="false">18&quot;</button><button class="len" type="button" data-price="245" aria-pressed="false">22&quot;</button></div>
-          <p class="price">$155</p>
-          <button class="add" type="button">Add to bag</button>
+          <h3>Raw Kinky Curly Bundle</h3>
+          <p class="bl">Tight coil pattern matched to 4a and 4b natural texture, so leave-out disappears.</p>
+          <div class="shd"><div class="dots" role="group" aria-label="Shade"><button class="dot" type="button" data-shade="1B" aria-pressed="true" aria-label="Shade 1B, Off Black" title="1B Off Black" style="--b:#1d1512;--l:#3b2b25"></button><button class="dot" type="button" data-shade="2" aria-pressed="false" aria-label="Shade 2, Darkest Brown" title="2 Darkest Brown" style="--b:#2e1c14;--l:#4d3226"></button></div><span class="shd-nm">1B &middot; Off Black</span></div>
+          <div class="lens" role="group" aria-label="Length"><button class="len" type="button" data-price="155" aria-pressed="true">14&quot;</button><button class="len" type="button" data-price="195" aria-pressed="false">18&quot;</button><button class="len" type="button" data-price="245" aria-pressed="false">22&quot;</button></div>
+          <div class="buy"><p class="price">$155</p><button class="add" type="button">Add to bag</button></div>
         </div>
       </article>
-      <article class="prod rv" style="--i:3" data-id="closure" data-name="5x5 HD Closure">
-        <div class="im"><img src="assets/img/shop-color.webp" alt="5x5 HD Closure" loading="lazy" width="800" height="896"></div>
+      <article class="prod rv" style="--i:3" data-id="honey-unit" data-name="Honey 13x4 Lace Unit" data-cat="units" data-shades="27,350,613">
+        <div class="im">
+          <img src="assets/img/prod-honey.webp" alt="Honey 13x4 Lace Unit" loading="lazy" width="880" height="1100">
+          <span class="tag">Best seller</span>
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save Honey 13x4 Lace Unit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
         <div class="bd">
-          <h3>5x5 HD Closure</h3>
-          <p class="bl">Melts flat, pre-plucked, and customised on the chair before you leave.</p>
-          <div class="lens" role="group" aria-label="Length for 5x5 HD Closure"><button class="len" type="button" data-price="120" aria-pressed="true">14&quot;</button><button class="len" type="button" data-price="150" aria-pressed="false">18&quot;</button></div>
-          <p class="price">$120</p>
-          <button class="add" type="button">Add to bag</button>
+          <h3>Honey 13x4 Lace Unit</h3>
+          <p class="bl">Pre-plucked HD lace with a shadow root. Customised and fitted free when you book an install.</p>
+          <div class="shd"><div class="dots" role="group" aria-label="Shade"><button class="dot" type="button" data-shade="27" aria-pressed="true" aria-label="Shade 27, Honey Blonde" title="27 Honey Blonde" style="--b:#b77428;--l:#e0a24f"></button><button class="dot" type="button" data-shade="350" aria-pressed="false" aria-label="Shade 350, Copper" title="350 Copper" style="--b:#9a3d12;--l:#cf6a2d"></button><button class="dot" type="button" data-shade="613" aria-pressed="false" aria-label="Shade 613, Platinum" title="613 Platinum" style="--b:#dcc592;--l:#f3e4bd"></button></div><span class="shd-nm">27 &middot; Honey Blonde</span></div>
+          <div class="lens" role="group" aria-label="Length"><button class="len" type="button" data-price="320" aria-pressed="true">18&quot;</button><button class="len" type="button" data-price="380" aria-pressed="false">22&quot;</button><button class="len" type="button" data-price="440" aria-pressed="false">26&quot;</button></div>
+          <div class="buy"><p class="price">$320</p><button class="add" type="button">Add to bag</button></div>
+        </div>
+      </article>
+      <article class="prod rv" style="--i:4" data-id="curly-unit" data-name="Deep Curl Glueless Unit" data-cat="curls" data-shades="1,1B,99J">
+        <div class="im">
+          <img src="assets/img/prod-curlyunit.webp" alt="Deep Curl Glueless Unit" loading="lazy" width="880" height="1100">
+          
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save Deep Curl Glueless Unit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
+        <div class="bd">
+          <h3>Deep Curl Glueless Unit</h3>
+          <p class="bl">Pull on, adjust the band, go. No glue, no lace to lay, and the curls hold without product.</p>
+          <div class="shd"><div class="dots" role="group" aria-label="Shade"><button class="dot" type="button" data-shade="1" aria-pressed="true" aria-label="Shade 1, Jet Black" title="1 Jet Black" style="--b:#0f0c0b;--l:#2a2522"></button><button class="dot" type="button" data-shade="1B" aria-pressed="false" aria-label="Shade 1B, Off Black" title="1B Off Black" style="--b:#1d1512;--l:#3b2b25"></button><button class="dot" type="button" data-shade="99J" aria-pressed="false" aria-label="Shade 99J, Burgundy" title="99J Burgundy" style="--b:#4d1020;--l:#7a2638"></button></div><span class="shd-nm">1 &middot; Jet Black</span></div>
+          <div class="lens" role="group" aria-label="Length"><button class="len" type="button" data-price="260" aria-pressed="true">16&quot;</button><button class="len" type="button" data-price="300" aria-pressed="false">20&quot;</button></div>
+          <div class="buy"><p class="price">$260</p><button class="add" type="button">Add to bag</button></div>
+        </div>
+      </article>
+      <article class="prod rv" style="--i:5" data-id="care-kit" data-name="The Aftercare Kit" data-cat="care" data-shades="">
+        <div class="im">
+          <img src="assets/img/prod-care.webp" alt="The Aftercare Kit" loading="lazy" width="880" height="1100">
+          
+          <button class="fav" type="button" aria-pressed="false" aria-label="Save The Aftercare Kit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
+        </div>
+        <div class="bd">
+          <h3>The Aftercare Kit</h3>
+          <p class="bl">Sulphate-free wash, a light leave-in, silk scrunchie and a boar bristle brush. Everything your install needs.</p>
+          
+          <div class="lens" role="group" aria-label="Size"><button class="len" type="button" data-price="68" aria-pressed="true">Full kit</button><button class="len" type="button" data-price="38" aria-pressed="false">Travel</button></div>
+          <div class="buy"><p class="price">$68</p><button class="add" type="button">Add to bag</button></div>
         </div>
       </article></div>
-</div></section>
+    <p class="none" id="noneMsg" hidden>Nothing in that combination yet. <button type="button" class="tlink" id="resetFilters">Show all hair</button></p>
+  </div>
+</section>
 
-<section class="section" id="book"><div class="shell">
-  <div class="head center rv">
-    <p class="pill">Booking</p>
-    <h2>Book in <em>sixty seconds</em></h2>
-    <p>Pick a service, pick a time, and you will get a text confirmation and a reminder the day before.</p>
-  </div>
-  <div class="book">
-    <div class="step rv" style="--i:0"><p class="n">One</p><h4>Choose a service</h4><p>Cut, colour or an extension install. Prices are on the service menu above, no surprises at the chair.</p></div>
-    <div class="step rv" style="--i:1"><p class="n">Two</p><h4>Pick a time</h4><p>Live availability, updated as the chair fills. Deposit holds the slot for installs over three hours.</p></div>
-    <div class="step rv" style="--i:2"><p class="n">Three</p><h4>Get confirmed</h4><p>Text confirmation straight away, and a reminder twenty-four hours before your appointment.</p></div>
-  </div>
-  <div class="head center rv" style="margin:2.8rem auto 0">
-    <p class="pill">Next available &mdash; Saturday</p>
-    <div class="slots" id="slots" role="group" aria-label="Available times on Saturday">
-      <button class="slot" type="button" aria-pressed="false">9:00 am</button>
-      <button class="slot" type="button" aria-pressed="false">10:30 am</button>
-      <button class="slot" type="button" disabled>12:00 pm</button>
-      <button class="slot" type="button" aria-pressed="false">1:30 pm</button>
-      <button class="slot" type="button" aria-pressed="false">3:00 pm</button>
-      <button class="slot" type="button" disabled>4:30 pm</button>
+<!-- shades -->
+<section class="shades" id="shades">
+  <div class="shell sh-grid">
+    <div class="sh-copy rv">
+      <p class="eyebrow">Colour match</p>
+      <h2>Find your <em>shade</em></h2>
+      <p class="lead">Tap a swatch. Every shade here is raw hair we keep in stock, and a free daylight match comes with any install.</p>
+      <div class="sh-panel" id="shPanel" aria-live="polite"><p class="code">1B</p><h3>Off Black</h3><p class="note">Our most-matched shade. Soft black with a hint of brown that blends with most natural hair.</p>
+        <p class="avail"><b>Comes in</b> Raw Straight Bundle, Raw Body Wave Bundle, Raw Kinky Curly Bundle, Deep Curl Glueless Unit</p>
+        <button class="btn pill" type="button" id="shopShade" data-shade="1B">Shop shade 1B <span class="arr" aria-hidden="true">&rarr;</span></button></div>
     </div>
-    <p style="margin-top:1.6rem"><a class="btn fill" href="tel:5555550172" id="bookCta">Confirm booking</a></p>
-    <p style="font-size:.72rem;color:var(--faint);margin-top:.9rem">Demo booking. In production this connects to Square Appointments or Calendly, which handles the calendar, deposit and SMS reminders.</p>
+    <div class="rack rv" role="group" aria-label="Hair shades">
+      <div class="rail" aria-hidden="true"></div>
+      <div class="strands">
+        <button class="strand" type="button" style="--i:0;--d:#050404;--b:#0f0c0b;--l:#2a2522" data-shade="1" aria-pressed="false" aria-label="1 Jet Black">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">1</span>
+        </button>
+        <button class="strand" type="button" style="--i:1;--d:#0d0908;--b:#1d1512;--l:#3b2b25" data-shade="1B" aria-pressed="true" aria-label="1B Off Black">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">1B</span>
+        </button>
+        <button class="strand" type="button" style="--i:2;--d:#1a0f0b;--b:#2e1c14;--l:#4d3226" data-shade="2" aria-pressed="false" aria-label="2 Darkest Brown">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">2</span>
+        </button>
+        <button class="strand" type="button" style="--i:3;--d:#2a160d;--b:#45271a;--l:#6b4330" data-shade="4" aria-pressed="false" aria-label="4 Chocolate">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">4</span>
+        </button>
+        <button class="strand" type="button" style="--i:4;--d:#3b1d0f;--b:#653619;--l:#94592f" data-shade="6" aria-pressed="false" aria-label="6 Chestnut">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">6</span>
+        </button>
+        <button class="strand" type="button" style="--i:5;--d:#4a1d0b;--b:#7a3616;--l:#aa5a2b" data-shade="30" aria-pressed="false" aria-label="30 Auburn">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">30</span>
+        </button>
+        <button class="strand" type="button" style="--i:6;--d:#5c1f07;--b:#9a3d12;--l:#cf6a2d" data-shade="350" aria-pressed="false" aria-label="350 Copper">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">350</span>
+        </button>
+        <button class="strand" type="button" style="--i:7;--d:#7a4415;--b:#b77428;--l:#e0a24f" data-shade="27" aria-pressed="false" aria-label="27 Honey Blonde">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">27</span>
+        </button>
+        <button class="strand" type="button" style="--i:8;--d:#b39561;--b:#dcc592;--l:#f3e4bd" data-shade="613" aria-pressed="false" aria-label="613 Platinum">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">613</span>
+        </button>
+        <button class="strand" type="button" style="--i:9;--d:#2a0710;--b:#4d1020;--l:#7a2638" data-shade="99J" aria-pressed="false" aria-label="99J Burgundy">
+          <span class="clip" aria-hidden="true"></span><span class="hair" aria-hidden="true"></span><span class="lbl">99J</span>
+        </button></div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="section section-alt"><div class="shell split">
-  <div class="im rv"><img src="assets/img/about.webp" alt="A client at Halo" loading="lazy" width="1100" height="733"></div>
-  <div class="rv">
-    <p class="pill">The studio</p>
-    <h2>Hair that suits <em>your life</em></h2>
-    <p>We start every appointment with a consultation, because the best cut is the one you can actually maintain between visits. If you want extensions, we will match texture in daylight before anything is installed.</p>
-    <p>Everything we sell is hair we have worked with ourselves on the chair.</p>
-    <a class="btn ghost" href="#book">Book a consultation</a>
+<!-- studio -->
+<section class="studio" id="studio">
+  <div class="shell st-grid">
+    <div class="polas rv">
+      <figure class="pola p1"><img src="assets/img/about.webp" alt="The wash station at Halo, with a palm and a woven pouf" loading="lazy" width="1000" height="1500"></figure>
+      <figure class="pola p2"><img src="assets/img/about-2.webp" alt="A stylist working at a styling chair by the front window" loading="lazy" width="800" height="1200"></figure>
+    </div>
+    <div class="st-copy rv">
+      <p class="eyebrow">The studio</p>
+      <h2>Pull up <em>a chair.</em></h2>
+      <p>Halo is four chairs, one wash station and a shelf of hair we would put on our own heads. It is bright, it is calm, and nobody is double-booked into your appointment.</p>
+      <p>Bring photos, bring questions, bring the bundles you bought somewhere else. We will tell you honestly what they will and will not do.</p>
+      <a class="btn pill" href="#book">Book a consultation <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="section"><div class="shell">
-  <div class="head center rv"><p class="pill">Insta glam</p><h2>Fresh looks <em>from the chair</em></h2></div>
-  <div class="gal"><a class="rv" style="--i:0" href="#book" aria-label="Book an appointment"><img src="assets/img/gal-1.webp" alt="" loading="lazy" width="700" height="805"></a><a class="rv" style="--i:1" href="#book" aria-label="Book an appointment"><img src="assets/img/gal-2.webp" alt="" loading="lazy" width="700" height="805"></a><a class="rv" style="--i:2" href="#book" aria-label="Book an appointment"><img src="assets/img/gal-3.webp" alt="" loading="lazy" width="700" height="805"></a><a class="rv" style="--i:3" href="#book" aria-label="Book an appointment"><img src="assets/img/gal-4.webp" alt="" loading="lazy" width="700" height="805"></a><a class="rv" style="--i:4" href="#book" aria-label="Book an appointment"><img src="assets/img/interior.webp" alt="" loading="lazy" width="700" height="805"></a></div>
-</div></section>
-
-<section class="section section-alt" id="visit"><div class="shell">
-  <div class="head center rv"><p class="pill">Visit</p><h2>Find <em>us</em></h2></div>
-  <div class="info">
-    <div class="rv"><h4>Hours</h4><ul><li class="hrs"><span>Tuesday to Friday</span><span>9:00am to 7:00pm</span></li><li class="hrs"><span>Saturday</span><span>8:00am to 6:00pm</span></li><li class="hrs"><span>Sunday and Monday</span><span>Closed</span></li></ul></div>
-    <div class="rv"><h4>Studio</h4><p>1642 N Damen Ave<br>Chicago, IL 60647</p></div>
-    <div class="rv"><h4>Get in touch</h4>
-      <p><a href="tel:5555550172">(555) 555-0172</a></p>
-      <p><a href="mailto:hello@halohair.example">hello@halohair.example</a></p>
-      <p>@halo.hair</p></div>
-    <div class="rv"><h4>Shipping</h4><p>Hair ships in one to three business days. Free over $150 within the US.</p></div>
+<!-- why -->
+<section class="why" aria-labelledby="whyH">
+  <div class="shell">
+    <div class="why-head rv"><p class="eyebrow">The difference</p><h2 id="whyH">Why clients <em>stay.</em></h2></div>
+    <ol class="why-list">
+      <li class="rv" style="--i:0"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"/><path d="M30 30l10 10"/><path d="M15 25c2-6 4-8 6-8s3 5 6 5"/></svg><span class="n">01</span><h3>Texture-first consultations</h3><p>We look at your hair before we talk about styles. Porosity, density and what it has been through all shape the plan.</p></li>
+      <li class="rv" style="--i:1"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 8h16l18 18-16 16L8 24Z"/><circle cx="17" cy="17" r="3"/><path d="M24 30c3-2 5-5 5-9"/></svg><span class="n">02</span><h3>We sell what we install</h3><p>Every bundle and unit in the shop is hair we have cut, coloured and pressed ourselves. If it does not hold up on the chair, it does not go on the shelf.</p></li>
+      <li class="rv" style="--i:2"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M34 30A15 15 0 1 1 22 8a12 12 0 0 0 12 22Z"/><path d="M36 8v6M33 11h6"/></svg><span class="n">03</span><h3>Aftercare you can actually do</h3><p>You leave knowing how to wrap it, wash it and sleep on it, with a written routine texted to you the same evening.</p></li></ol>
   </div>
-</div></section>
+</section>
+
+<!-- work -->
+<section class="work">
+  <p class="wm" aria-hidden="true">Halo</p>
+  <div class="shell">
+    <div class="sec-head rv">
+      <div><p class="eyebrow">Our work</p><h2>Fresh off <em>the chair</em></h2></div>
+    </div>
+    <div class="collage">
+      <figure class="w w1 rv" style="--i:0"><img src="assets/img/work-1.webp" alt="Sleek braided pony" loading="lazy" width="900" height="1300"><figcaption>Sleek braided pony</figcaption></figure>
+      <figure class="w w2 rv" style="--i:1"><img src="assets/img/work-2.webp" alt="Silver braid updo" loading="lazy" width="900" height="1300"><figcaption>Silver braid updo</figcaption></figure>
+      <figure class="w w3 rv" style="--i:2"><img src="assets/img/work-3.webp" alt="Mid-back box braids" loading="lazy" width="900" height="1300"><figcaption>Mid-back box braids</figcaption></figure>
+      <figure class="w w4 rv" style="--i:3"><img src="assets/img/work-4.webp" alt="Natural shape &amp; trim" loading="lazy" width="900" height="1300"><figcaption>Natural shape &amp; trim</figcaption></figure>
+      <figure class="w w5 rv" style="--i:4"><img src="assets/img/work-5.webp" alt="Feed-in cornrows" loading="lazy" width="900" height="1300"><figcaption>Feed-in cornrows</figcaption></figure>
+      <figure class="w w6 rv" style="--i:5"><img src="assets/img/work-6.webp" alt="Chunky twists" loading="lazy" width="900" height="1300"><figcaption>Chunky twists</figcaption></figure>
+      <div class="w-note rv" style="--i:6"><p class="script">tag us</p><p>Braids, presses and natural styles from the last few weeks. Tag <b>@halo.hair</b> and we will share yours.</p><a class="tlink" href="#book">Book your look</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- booking -->
+<section class="book" id="book">
+  <div class="shell bk-grid">
+    <div class="bk-copy rv">
+      <p class="eyebrow">Booking</p>
+      <h2>Book in <em>under a minute</em></h2>
+      <p>Pick a service, a day and a time. Only times that fit the whole appointment before closing are shown, so a five-hour braid set never lands at 4pm.</p>
+      <ul class="bk-notes">
+        <li>Text confirmation straight away</li>
+        <li>Reminder the day before</li>
+        <li>$50 deposit on appointments of 3 hours or more</li>
+      </ul>
+    </div>
+    <form class="bk-card rv" id="bkForm" novalidate>
+      <label class="bk-lbl" for="bkSvc"><span>1</span> Service</label>
+      <select id="bkSvc" name="service">
+        <optgroup label="Silk Press"><option value="press:0">Silk press, 1 hr 30 min, $95</option><option value="press:1">Silk press &amp; trim, 2 hrs, $120</option><option value="press:2">Press refresh (within 2 weeks), 1 hr, $65</option></optgroup>
+        <optgroup label="Knotless Braids"><option value="braids:0">Knotless, shoulder length, 4 hrs, $220</option><option value="braids:1">Knotless, mid-back, 5 hrs, $260</option><option value="braids:2">Boho knotless, mid-back, 5 hrs 30 min, $300</option><option value="braids:3">Feed-in cornrows, 2 hrs, $110</option></optgroup>
+        <optgroup label="Sew-ins &amp; Installs"><option value="installs:0">Traditional sew-in, 3 hrs, $180</option><option value="installs:1">Closure sew-in &amp; style, 3 hrs 30 min, $240</option><option value="installs:2">Frontal install &amp; customise, 4 hrs, $300</option><option value="installs:3">Glueless unit fit, 1 hr 30 min, $120</option></optgroup>
+        <optgroup label="Bespoke Colour"><option value="colour:0">Gloss &amp; tone, 1 hr, $85</option><option value="colour:1">All-over colour, 2 hrs, $150</option><option value="colour:2">Highlights &amp; balayage, 3 hrs, $240</option><option value="colour:3">Unit or bundle colour, 2 hrs, $130</option></optgroup>
+        <optgroup label="Natural Care"><option value="natural:0">Wash &amp; go, 1 hr 15 min, $80</option><option value="natural:1">Two-strand twists, 2 hrs 30 min, $140</option><option value="natural:2">Deep treatment &amp; steam, 45 min, $45</option><option value="natural:3">Curly cut &amp; shape, 1 hr 15 min, $90</option></optgroup></select>
+      <p class="bk-lbl" id="bkDayL"><span>2</span> Day</p>
+      <div class="days" id="bkDays" role="radiogroup" aria-labelledby="bkDayL"></div>
+      <p class="bk-lbl" id="bkTimeL"><span>3</span> Time</p>
+      <div class="times" id="bkTimes" role="radiogroup" aria-labelledby="bkTimeL"></div>
+      <div class="bk-sum" id="bkSum" aria-live="polite"></div>
+      <button class="btn pill fill wide" type="submit" id="bkGo" disabled>Choose a time</button>
+      <p class="fine">Demo booking. In production this connects to Square Appointments or Acuity, which hold the calendar, take the deposit and send the texts.</p>
+    </form>
+  </div>
+</section>
+
+<!-- visit -->
+<section class="visit" id="visit">
+  <div class="shell">
+    <div class="sec-head center rv"><p class="eyebrow">Visit</p><h2>Come <em>see us</em></h2></div>
+    <div class="info">
+      <div class="rv"><h3>Hours</h3><ul class="hrs"><li><span>Tuesday &amp; Wednesday</span><span>9am to 7pm</span></li><li><span>Thursday</span><span>10am to 8pm</span></li><li><span>Friday</span><span>9am to 7pm</span></li><li><span>Saturday</span><span>8am to 5pm</span></li><li><span>Sunday &amp; Monday</span><span>Closed</span></li></ul><p class="open-now" id="openNow"></p></div>
+      <div class="rv"><h3>Studio</h3><p>1642 N Damen Ave<br>Chicago, IL 60647</p><p class="mut">Street parking on Damen. Blue Line to Damen, two minutes on foot.</p></div>
+      <div class="rv"><h3>Get in touch</h3>
+        <p><a href="tel:5555550172">(555) 555-0172</a></p>
+        <p><a href="mailto:hello@halohair.example">hello@halohair.example</a></p>
+        <p>@halo.hair</p></div>
+      <div class="rv"><h3>Hair orders</h3><p>Ships in one to three business days. Free over $150 in the US, or collect from the studio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <img src="assets/img/cta.webp" alt="" loading="lazy" width="2000" height="1333">
+  <div class="cta-in rv">
+    <p class="script">see you soon</p>
+    <h2>Your chair is <em>waiting.</em></h2>
+    <a class="btn pill light" href="#book">Book appointment <span class="arr" aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
 
 </main>
 
 <div class="scrim" id="scrim"></div>
-<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-label="Your bag" aria-hidden="true">
-  <header><h2>Your bag</h2><button class="close" id="cartClose" aria-label="Close bag">&times;</button></header>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartH" aria-hidden="true">
+  <header><h2 id="cartH">Your <em>bag</em></h2><button class="close" id="cartClose" type="button" aria-label="Close bag">&times;</button></header>
   <ul class="items" id="cartItems"><li class="empty">Your bag is empty.</li></ul>
   <footer>
+    <div class="ship" id="shipBar"><p id="shipTxt"></p><span><i id="shipFill"></i></span></div>
     <div class="sum"><span>Subtotal</span><b id="cartTotal">$0</b></div>
-    <button class="btn fill" style="width:100%;border:0" id="checkout">Checkout</button>
-    <p class="note">Demo bag. In production this hands off to Shopify or Stripe Checkout for payment and shipping.</p>
+    <button class="btn pill fill wide" type="button" id="checkout">Checkout</button>
+    <p class="fine">Demo bag. In production this hands off to Shopify or Stripe Checkout for payment and shipping.</p>
   </footer>
 </aside>
 
 <div class="demo-foot">Demo site. Halo is a fictional salon, built to show what a small-business site can do.
   <a href="https://tahvia127.github.io/framework-studio/" target="_blank" rel="noopener noreferrer">Made by Framework Studio</a></div>
-<footer><div class="shell">
-  <span>&copy; <span id="yr">2026</span> Halo Hair Studio</span>
-  <span>1642 N Damen Ave, Chicago, IL 60647</span>
-  <span><a href="tel:5555550172">(555) 555-0172</a></span>
-</div></footer>
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-var MARQ=["Free shipping over $150","Raw hair, ethically sourced","Same-day installs available","Book online in 60 seconds","Ships in 1 to 3 business days"];
-document.getElementById('track').innerHTML=MARQ.concat(MARQ).concat(MARQ).concat(MARQ)
-  .map(function(m){return '<span>'+m+' \u2726</span>'}).join('');
-
-var nav=document.getElementById('nav');
-addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>12)},{passive:true});
-
-if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
-    {rootMargin:'0px 0px -8% 0px',threshold:.05});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
-
-/* ---- length picker ---- */
-document.querySelectorAll('.prod').forEach(function(card){
-  var lens=card.querySelectorAll('.len'), price=card.querySelector('.price');
-  lens.forEach(function(b){ b.addEventListener('click',function(){
-    lens.forEach(function(o){o.setAttribute('aria-pressed',String(o===b))});
-    price.textContent='$'+b.dataset.price;
-  })});
-});
-
-/* ---- bag ---- */
-var KEY='halo-bag', bag=[];
-try{ bag=JSON.parse(localStorage.getItem(KEY)||'[]') }catch(e){ bag=[] }
-var elItems=document.getElementById('cartItems'), elCount=document.getElementById('cartCount'),
-    elTotal=document.getElementById('cartTotal'), cart=document.getElementById('cart'),
-    scrim=document.getElementById('scrim');
-
-function save(){ try{ localStorage.setItem(KEY,JSON.stringify(bag)) }catch(e){} }
-function render(){
-  elCount.textContent=bag.length;
-  elTotal.textContent='$'+bag.reduce(function(t,i){return t+i.price},0);
-  if(!bag.length){ elItems.innerHTML='<li class="empty">Your bag is empty.</li>'; return }
-  elItems.innerHTML=bag.map(function(i,ix){
-    return '<li><span class="n">'+i.name+'</span><span class="p">$'+i.price+'</span>'+
-           '<span class="v">'+i.length+'</span>'+
-           '<button class="rm" type="button" data-ix="'+ix+'">Remove</button></li>'}).join('');
-}
-elItems.addEventListener('click',function(e){
-  var b=e.target.closest('.rm'); if(!b) return;
-  bag.splice(+b.dataset.ix,1); save(); render();
-});
-document.querySelectorAll('.prod').forEach(function(card){
-  card.querySelector('.add').addEventListener('click',function(){
-    var sel=card.querySelector('.len[aria-pressed="true"]')||card.querySelector('.len');
-    bag.push({id:card.dataset.id,name:card.dataset.name,length:sel.textContent,price:+sel.dataset.price});
-    save(); render(); openCart();
-    var btn=this; btn.textContent='Added'; btn.classList.add('added');
-    setTimeout(function(){btn.textContent='Add to bag'; btn.classList.remove('added')},1200);
-  });
-});
-function openCart(){ cart.classList.add('open'); cart.setAttribute('aria-hidden','false'); scrim.classList.add('on') }
-function closeCart(){ cart.classList.remove('open'); cart.setAttribute('aria-hidden','true'); scrim.classList.remove('on') }
-document.getElementById('cartOpen').addEventListener('click',openCart);
-document.getElementById('cartClose').addEventListener('click',closeCart);
-scrim.addEventListener('click',closeCart);
-addEventListener('keydown',function(e){ if(e.key==='Escape') closeCart() });
-document.getElementById('checkout').addEventListener('click',function(){
-  if(!bag.length){ this.textContent='Bag is empty'; var t=this; setTimeout(function(){t.textContent='Checkout'},1400); return }
-  this.textContent='Demo only \u2014 no payment taken';
-  var t=this; setTimeout(function(){t.textContent='Checkout'},2200);
-});
-render();
-
-/* ---- booking slots ---- */
-var slots=document.querySelectorAll('.slot:not([disabled])'), cta=document.getElementById('bookCta');
-slots.forEach(function(s){ s.addEventListener('click',function(){
-  slots.forEach(function(o){o.setAttribute('aria-pressed',String(o===s))});
-  cta.textContent='Confirm '+s.textContent+' Saturday';
-})});
-</script>
+<footer class="foot">
+  <div class="shell">
+    <p class="foot-mark" aria-hidden="true">Halo</p>
+    <div class="foot-cols">
+      <div><h3>Studio</h3><p>1642 N Damen Ave<br>Chicago, IL 60647</p></div>
+      <div><h3>Book</h3><ul><li><a href="#services">Services &amp; prices</a></li><li><a href="#book">Book online</a></li><li><a href="tel:5555550172">(555) 555-0172</a></li></ul></div>
+      <div><h3>Shop</h3><ul><li><a href="#shop">Bundles &amp; units</a></li><li><a href="#shades">Shade guide</a></li><li><a href="mailto:hello@halohair.example">hello@halohair.example</a></li></ul></div>
+    </div>
+    <p class="foot-base"><span>&copy; <span id="yr">2026</span> Halo Hair Studio</span><span>@halo.hair</span></p>
+  </div>
+</footer>
+<script>var HALO={"announce":["Now booking new clients for October","Free shipping on hair orders over $150","Free texture consultation with any install"],"schedule":{"days":{"0":null,"1":null,"2":["09:00","19:00"],"3":["09:00","19:00"],"4":["10:00","20:00"],"5":["09:00","19:00"],"6":["08:00","17:00"]},"every":60,"tz":"America/Chicago"},"depositOver":180,"deposit":50,"freeShip":150,"services":{"press":[{"n":"Silk press","m":90,"p":95},{"n":"Silk press & trim","m":120,"p":120},{"n":"Press refresh (within 2 weeks)","m":60,"p":65}],"braids":[{"n":"Knotless, shoulder length","m":240,"p":220},{"n":"Knotless, mid-back","m":300,"p":260},{"n":"Boho knotless, mid-back","m":330,"p":300},{"n":"Feed-in cornrows","m":120,"p":110}],"installs":[{"n":"Traditional sew-in","m":180,"p":180},{"n":"Closure sew-in & style","m":210,"p":240},{"n":"Frontal install & customise","m":240,"p":300},{"n":"Glueless unit fit","m":90,"p":120}],"colour":[{"n":"Gloss & tone","m":60,"p":85},{"n":"All-over colour","m":120,"p":150},{"n":"Highlights & balayage","m":180,"p":240},{"n":"Unit or bundle colour","m":120,"p":130}],"natural":[{"n":"Wash & go","m":75,"p":80},{"n":"Two-strand twists","m":150,"p":140},{"n":"Deep treatment & steam","m":45,"p":45},{"n":"Curly cut & shape","m":75,"p":90}]},"shades":{"1":{"n":"Jet Black","note":"True black with a blue-cool shine. Best on very dark natural hair that has been dyed.","avail":["Deep Curl Glueless Unit"]},"2":{"n":"Darkest Brown","note":"Reads black indoors and espresso in daylight.","avail":["Raw Straight Bundle","Raw Kinky Curly Bundle"]},"4":{"n":"Chocolate","note":"Warm medium brown. A good middle ground if you are between shades.","avail":["Raw Straight Bundle","Raw Body Wave Bundle"]},"6":{"n":"Chestnut","note":"Brown with red undertones that come alive in the sun.","avail":["Raw Body Wave Bundle"]},"27":{"n":"Honey Blonde","note":"Golden honey. Our most requested colour on units.","avail":["Honey 13x4 Lace Unit"]},"30":{"n":"Auburn","note":"Copper-brown. Pairs well with a 1B root for a lived-in look.","avail":["Raw Body Wave Bundle"]},"350":{"n":"Copper","note":"Bright ginger copper. Pre-lifted, so it will not go brassy.","avail":["Honey 13x4 Lace Unit"]},"613":{"n":"Platinum","note":"Lifted blank canvas. Tone it to any pastel or wear it icy.","avail":["Honey 13x4 Lace Unit"]},"1B":{"n":"Off Black","note":"Our most-matched shade. Soft black with a hint of brown that blends with most natural hair.","avail":["Raw Straight Bundle","Raw Body Wave Bundle","Raw Kinky Curly Bundle","Deep Curl Glueless Unit"]},"99J":{"n":"Burgundy","note":"Deep wine. Looks near-black until the light catches it.","avail":["Deep Curl Glueless Unit"]}}};</script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

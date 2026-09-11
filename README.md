@@ -1,50 +1,45 @@
 # Halo Hair Studio
 
-A salon site that books appointments **and** sells the extensions the salon installs.
+A salon site that books appointments **and** sells the hair the salon installs.
 
-**Status:** unpublished demo. Not on GitHub Pages, not linked from the studio site.
-**Built by:** Framework Studio.
+**Live demo:** https://tahvia127.github.io/halo-hair/
+**Built by:** Framework Studio. Halo is a fictional salon; every page carries a demo notice.
 
 ---
 
 ## What this one proves
 
-Two of the ten portfolio ideas in one build:
-
-- **Booking that actually books** — a service menu with real durations and prices, live-looking slot selection, and a confirm step. In production this hands off to Square Appointments or Calendly, which own the calendar, the deposit and the SMS reminders.
-- **A working cart** — pick a length, the price updates, add to bag, the drawer opens, the subtotal recalculates, and the bag survives a page reload. In production this hands off to Shopify or Stripe Checkout.
-
-Both are the questions a salon owner asks first: *can people book without calling me,* and *can I sell hair while I sleep.*
+- **Booking that respects the calendar.** Pick a service, a day and a time. Days and times come from the opening hours in `data/site.json`, read in the salon's own time zone (not the visitor's). A time is only offered if the whole appointment fits before closing, so a five-hour braid set can't start at 4pm. Long appointments show the deposit. In production this hands off to Square Appointments or Acuity.
+- **A shop that works.** Collection tiles and chips filter the grid. Each product has shade and length pickers that reprice live. The bag merges duplicates, keeps shade, length and quantity, shows progress toward free shipping and survives a reload. In production this hands off to Shopify or Stripe Checkout.
+- **A shade guide that sells.** Ten raw-hair shades hang on a rack. Pick one to see what it's like and which products come in it, then "Shop shade 27" filters the shop and preselects that shade on every card.
+- **A menu the owner can read.** Five services open into priced menus with durations. Every line has a Book button that preselects it in the booking form.
 
 ## How it works
 
 ```
-data/site.json     ─┐
-data/services.json ─┤─> build.mjs ─> index.html
-data/shop.json     ─┤
+data/site.json     ─┐  name, hours (machine-readable), copy, marquee, demo notice
+data/services.json ─┤  services, menu items, minutes, prices, deposit rule
+data/shop.json     ─┤  shades, collections, products, lengths, prices
 src/index.template ─┘
+        │
+        └─> build.mjs ─> index.html          (zero dependencies)
+            assets/js/site.js  reads window.HALO, written by the build
 ```
 
-Services, prices, durations, products, lengths and stock all live in `data/`. `build.mjs` renders them into the page. Nothing about the menu or the shop is hand-written HTML.
+`build.mjs` **fails the build** instead of shipping a broken page if a product names a shade or collection that doesn't exist, an image is missing, a menu item has no price or duration, or the opening hours are malformed.
 
-`build.mjs` has zero dependencies.
-
-## The cart
-
-Client-side, in `localStorage` under `halo-bag`. Add, remove, subtotal, persistence across reloads. Every read and write is wrapped in try/catch, so a browser blocking site data degrades to an empty bag rather than a broken page.
-
-It deliberately stops short of payment. The checkout button says so.
+Opening hours are entered once, as times. The build groups them for display ("Tuesday & Wednesday, 9am to 7pm"), writes `openingHoursSpecification` JSON-LD from them, and the booking form and the "open now" line read the same data.
 
 ## Repository layout
 
 ```
-data/site.json       Name, hours, address, marquee lines, demo notice.
-data/services.json   Three services, each with a priced menu.
-data/shop.json       Products, lengths and prices.
-src/                 Page template with {{TOKEN}} placeholders.
-build.mjs            Renders template + data. No dependencies.
-assets/              Stylesheet and images.
-index.html           Generated. Do not edit by hand.
+data/                 Everything the owner would edit.
+src/                  Page template with {{TOKEN}} placeholders.
+build.mjs             Renders template + data, validates both.
+assets/js/site.js     Behaviour: booking, filters, shade rack, bag.
+assets/css/styles.css Stylesheet.
+assets/img/           Photography (see CREDITS.md).
+index.html            Generated. Do not edit by hand.
 ```
 
 ## Running it
@@ -56,20 +51,17 @@ python3 -m http.server 8000
 
 ## Design notes
 
-- **Type:** Bodoni Moda for display, Parisienne for script accents, Inter for body.
-- **Color:** cream `#FBF4F1`, blush `#F2D9D8`, wine `#6B1E32`, rose `#B9556B`.
-  Rose is used at display sizes only; small text uses `--rose-ink` `#B04A61`, because
-  the lighter rose is 4.22:1 on cream and fails AA below large-text size.
-- **Motion:** hero image float, rotating badge, marquee, staggered reveals, hover scale.
-  All disabled under `prefers-reduced-motion`.
-- **SEO:** `HairSalon` JSON-LD.
+- **Type:** Instrument Serif with italic accents for display, Jost for body, Mrs Saint Delafield for occasional script.
+- **Colour:** cream `#FBF6F1`, petal pink `#F8D5E1`, espresso `#2A1D1A`, gold `#C9A45A`. Small pink text uses `--pink-ink` `#A13F66` (5.7:1 on cream). Every text pair clears WCAG AA.
+- **Motifs:** the arch (hero portrait, collection tiles, menu photos) and the halo ring (logo, hero headline), plus illustrated tools orbiting a pink disc and a gold rail of hair swatches.
+- **Motion:** image settle, drawn halo, orbiting badge, marquee, floating tools with parallax, pink sweep on service rows, a photo that follows the cursor across the menu, swinging swatches, staggered reveals. All of it is off under `prefers-reduced-motion`.
+- **Accessibility:** real buttons and radio groups with arrow-key support, focus trapped in the bag drawer and returned on close, `aria-live` on the shade panel and booking summary.
 
 ## Before this goes to a real client
 
-1. Replace every image in `assets/img/` with the salon's own photography. Placeholders are Unsplash, under the Unsplash License. Product shots especially: these are portraits standing in for bundle photography.
-2. Connect booking to Square or Calendly.
-3. Connect checkout to Shopify or Stripe.
-4. Set `demo.show` to `false` in `data/site.json` to drop the demo banner.
+1. Replace every image in `assets/img/` with the salon's own photography.
+2. Connect booking to Square or Acuity, and checkout to Shopify or Stripe.
+3. Set `demo.show` to `false` in `data/site.json` to drop the demo notice.
 
 ## A note on the imagery
 

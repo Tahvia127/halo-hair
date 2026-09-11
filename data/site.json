@@ -2,23 +2,83 @@
   "name": "Halo",
   "tagline": "Hair Studio",
   "city": "Chicago",
-  "hero": { "line1": "Your hair.", "line2": "Your era.", "sub": "Cut. Colour. Extensions." },
-  "intro": "Halo is a hair studio and extensions house in Wicker Park. We cut, colour and install, and we sell the same raw bundles and closures we use on the chair. Book a seat or shop the hair, whichever you came for.",
-  "address": { "line1": "1642 N Damen Ave", "line2": "Chicago, IL 60647" },
+  "neighborhood": "Wicker Park",
+  "hero": {
+    "lead": "Laid, lifted &",
+    "em": "entirely you.",
+    "sub": "Silk presses, knotless braids, installs and colour in Wicker Park. Plus the raw bundles and lace units we trust on the chair, shipped to your door."
+  },
+  "welcome": {
+    "lead": "Your texture",
+    "em": "leads.",
+    "tail": "We follow it.",
+    "body": "Every appointment starts with a proper look at your hair in daylight: what it does, what it hates, and what you actually have time for on a Tuesday morning. Then we build the style around that, not the other way round."
+  },
+  "intro": "Halo is a hair studio and extensions house in Wicker Park, Chicago. We press, braid, install and colour, and we sell the same raw bundles and lace units we use on the chair.",
+  "address": {
+    "line1": "1642 N Damen Ave",
+    "line2": "Chicago, IL 60647"
+  },
   "phone": "(555) 555-0172",
   "email": "hello@halohair.example",
   "instagram": "@halo.hair",
-  "hours": [
-    { "days": "Tuesday to Friday", "time": "9:00am to 7:00pm" },
-    { "days": "Saturday", "time": "8:00am to 6:00pm" },
-    { "days": "Sunday and Monday", "time": "Closed" }
+  "schedule": {
+    "note": "24-hour times. null means closed. Monday is 1, Sunday is 0. Booking slots are generated from these.",
+    "days": {
+      "0": null,
+      "1": null,
+      "2": [
+        "09:00",
+        "19:00"
+      ],
+      "3": [
+        "09:00",
+        "19:00"
+      ],
+      "4": [
+        "10:00",
+        "20:00"
+      ],
+      "5": [
+        "09:00",
+        "19:00"
+      ],
+      "6": [
+        "08:00",
+        "17:00"
+      ]
+    },
+    "slotEvery": 60,
+    "timezone": "America/Chicago"
+  },
+  "announce": [
+    "Now booking new clients for October",
+    "Free shipping on hair orders over $150",
+    "Free texture consultation with any install"
   ],
   "marquee": [
-    "Free shipping over $150",
+    "Silk press Tuesdays",
     "Raw hair, ethically sourced",
-    "Same-day installs available",
-    "Book online in 60 seconds",
-    "Ships in 1 to 3 business days"
+    "Knotless in one sitting",
+    "Sew-ins that last eight weeks",
+    "Ships in 1 to 3 days"
+  ],
+  "why": [
+    {
+      "t": "Texture-first consultations",
+      "d": "We look at your hair before we talk about styles. Porosity, density and what it has been through all shape the plan.",
+      "icon": "look"
+    },
+    {
+      "t": "We sell what we install",
+      "d": "Every bundle and unit in the shop is hair we have cut, coloured and pressed ourselves. If it does not hold up on the chair, it does not go on the shelf.",
+      "icon": "tag"
+    },
+    {
+      "t": "Aftercare you can actually do",
+      "d": "You leave knowing how to wrap it, wash it and sleep on it, with a written routine texted to you the same evening.",
+      "icon": "moon"
+    }
   ],
   "demo": {
     "show": true,
